@@ -1,0 +1,20 @@
+{
+  "name": "rocketindex",
+  "version": "0.1.0-beta.33",
+  "description": "Semantic code navigation - find callers, definitions, and dependencies without grep",
+  "author": {
+    "name": "Rocket Tycoon",
+    "url": "https://github.com/rocket-tycoon"
+  },
+  "repository": "https://github.com/rocket-tycoon/rocket-index",
+  "homepage": "https://github.com/rocket-tycoon/rocket-index",
+  "license": "BSL-1.1",
+  "keywords": ["code-navigation", "semantic-search", "find-callers", "dependency-graph", "mcp"],
+  "mcpServers": {
+    "rocket-index": {
+      "command": "${CLAUDE_PLUGIN_ROOT}/bin/rkt-wrapper.sh",
+      "args": ["serve"]
+    }
+  },
+  "hooks": "./hooks/hooks.json"
+}

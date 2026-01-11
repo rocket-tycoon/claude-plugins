@@ -15,7 +15,7 @@
         "name": "Rocket Tycoon",
         "url": "https://github.com/rocket-tycoon"
       },
-      "source": "github:rocket-tycoon/rocket-index/plugins/claude-code",
+      "source": "./plugins/rocketindex",
       "category": "mcp",
       "homepage": "https://github.com/rocket-tycoon/rocket-index",
       "tags": ["code-navigation", "semantic-search", "mcp", "find-callers", "dependency-graph"]
@@ -28,7 +28,7 @@
         "name": "Rocket Tycoon",
         "url": "https://github.com/rocket-tycoon"
       },
-      "source": "github:rocket-tycoon/rocket-manifest/plugins/claude-code",
+      "source": "./plugins/rocketmanifest",
       "category": "mcp",
       "homepage": "https://github.com/rocket-tycoon/rocket-manifest",
       "tags": ["feature-management", "documentation", "mcp", "product-management", "ai-agents"]
