@@ -30,7 +30,7 @@
       },
       "source": "./plugins/manifest",
       "category": "mcp",
-      "homepage": "https://github.com/rocket-tycoon/rocket-manifest",
+      "homepage": "https://github.com/rocket-tycoon/manifest",
       "tags": ["feature-management", "documentation", "mcp", "product-management", "ai-agents"]
     }
   ]

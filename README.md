@@ -10,7 +10,7 @@ Claude Code plugins from Rocket Tycoon.
 
 # Install plugins
 /plugin install rocketindex
-/plugin install rocketmanifest
+/plugin install manifest
 ```
 
 ## Available Plugins
@@ -18,4 +18,4 @@ Claude Code plugins from Rocket Tycoon.
 | Plugin | Description |
 |--------|-------------|
 | **rocketindex** | Semantic code navigation - find callers, definitions, and dependencies |
-| **rocketmanifest** | Living feature documentation for AI-assisted development |
+| **manifest** | Living feature documentation for AI-assisted development |

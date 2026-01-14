@@ -1,0 +1,13 @@
+# Downloaded binaries (auto-downloaded by wrapper scripts)
+plugins/*/bin/rkt
+plugins/*/bin/mfst
+
+# Auto-update state files
+plugins/*/bin/.version
+plugins/*/bin/.last_check
+
+# Claude Code local settings
+.claude/settings.local.json
+
+# macOS
+.DS_Store
