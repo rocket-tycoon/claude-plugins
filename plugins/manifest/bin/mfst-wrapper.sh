@@ -11,7 +11,7 @@ fi
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 MFST_BIN="$SCRIPT_DIR/mfst"
-VERSION="0.1.18"
+VERSION="0.1.19"
 
 # Detect platform
 case "$(uname -s)" in
