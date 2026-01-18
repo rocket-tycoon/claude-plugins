@@ -11,7 +11,7 @@ fi
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 MANIFEST_BIN="$SCRIPT_DIR/manifest"
-VERSION="0.1.20"
+VERSION="0.1.21"
 
 # Detect platform
 case "$(uname -s)" in
