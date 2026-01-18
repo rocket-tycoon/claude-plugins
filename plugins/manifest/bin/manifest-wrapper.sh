@@ -4,14 +4,14 @@
 
 set -e
 
-# Prefer system-installed mfst (Homebrew) over downloading
-if command -v mfst &> /dev/null; then
-    exec mfst "$@"
+# Prefer system-installed manifest (Homebrew) over downloading
+if command -v manifest &> /dev/null; then
+    exec manifest "$@"
 fi
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-MFST_BIN="$SCRIPT_DIR/mfst"
-VERSION="0.1.19"
+MANIFEST_BIN="$SCRIPT_DIR/manifest"
+VERSION="0.1.20"
 
 # Detect platform
 case "$(uname -s)" in
@@ -37,11 +37,11 @@ esac
 
 # Check if we need to download (missing or wrong version)
 NEED_DOWNLOAD=false
-if [ ! -x "$MFST_BIN" ]; then
+if [ ! -x "$MANIFEST_BIN" ]; then
     NEED_DOWNLOAD=true
 else
     # Check installed version matches expected version
-    INSTALLED_VERSION=$("$MFST_BIN" --version 2>/dev/null | grep -oE '[0-9]+\.[0-9]+\.[0-9]+(-[a-zA-Z0-9.]+)?' || echo "unknown")
+    INSTALLED_VERSION=$("$MANIFEST_BIN" --version 2>/dev/null | grep -oE '[0-9]+\.[0-9]+\.[0-9]+(-[a-zA-Z0-9.]+)?' || echo "unknown")
     if [ "$INSTALLED_VERSION" != "$VERSION" ]; then
         echo "Updating Manifest from $INSTALLED_VERSION to $VERSION..." >&2
         NEED_DOWNLOAD=true
@@ -51,7 +51,7 @@ fi
 if [ "$NEED_DOWNLOAD" = true ]; then
     echo "Downloading Manifest $VERSION for $PLATFORM..." >&2
 
-    DOWNLOAD_URL="https://github.com/rocket-tycoon/manifest/releases/download/v${VERSION}/mfst-v${VERSION}-${PLATFORM}.tar.gz"
+    DOWNLOAD_URL="https://github.com/rocket-tycoon/manifest/releases/download/v${VERSION}/manifest-v${VERSION}-${PLATFORM}.tar.gz"
 
     # Create temp directory
     TMP_DIR=$(mktemp -d)
@@ -59,22 +59,22 @@ if [ "$NEED_DOWNLOAD" = true ]; then
 
     # Download and extract
     if command -v curl &> /dev/null; then
-        curl -fsSL "$DOWNLOAD_URL" -o "$TMP_DIR/mfst.tar.gz"
+        curl -fsSL "$DOWNLOAD_URL" -o "$TMP_DIR/manifest.tar.gz"
     elif command -v wget &> /dev/null; then
-        wget -q "$DOWNLOAD_URL" -O "$TMP_DIR/mfst.tar.gz"
+        wget -q "$DOWNLOAD_URL" -O "$TMP_DIR/manifest.tar.gz"
     else
         echo "Error: curl or wget required" >&2
         exit 1
     fi
 
-    tar -xzf "$TMP_DIR/mfst.tar.gz" -C "$TMP_DIR"
+    tar -xzf "$TMP_DIR/manifest.tar.gz" -C "$TMP_DIR"
 
     # Move binary to plugin bin directory
-    mv "$TMP_DIR/mfst" "$MFST_BIN"
-    chmod +x "$MFST_BIN"
+    mv "$TMP_DIR/manifest" "$MANIFEST_BIN"
+    chmod +x "$MANIFEST_BIN"
 
     echo "Manifest installed successfully" >&2
 fi
 
-# Execute mfst with all arguments
-exec "$MFST_BIN" "$@"
+# Execute manifest with all arguments
+exec "$MANIFEST_BIN" "$@"

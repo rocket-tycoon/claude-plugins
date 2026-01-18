@@ -1,6 +1,6 @@
 {
   "name": "manifest",
-  "version": "0.1.19",
+  "version": "0.1.20",
   "description": "Living feature documentation for AI-assisted development",
   "author": {
     "name": "Rocket Tycoon",
@@ -12,7 +12,7 @@
   "keywords": ["feature-management", "documentation", "product-management", "ai-agents", "mcp"],
   "mcpServers": {
     "manifest": {
-      "command": "${CLAUDE_PLUGIN_ROOT}/bin/mfst-wrapper.sh",
+      "command": "${CLAUDE_PLUGIN_ROOT}/bin/manifest-wrapper.sh",
       "args": ["mcp"]
     }
   }
