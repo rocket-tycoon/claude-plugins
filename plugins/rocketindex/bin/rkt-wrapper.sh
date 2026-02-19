@@ -46,7 +46,7 @@ fi
 if [ "$NEED_DOWNLOAD" = true ]; then
     echo "Downloading RocketIndex $VERSION for $PLATFORM..." >&2
 
-    DOWNLOAD_URL="https://github.com/rocket-tycoon/rocket-index/releases/download/v${VERSION}/rocketindex-v${VERSION}-${PLATFORM}.tar.gz"
+    DOWNLOAD_URL="https://github.com/manifestdocs/rocket-index/releases/download/v${VERSION}/rocketindex-v${VERSION}-${PLATFORM}.tar.gz"
 
     # Create temp directory
     TMP_DIR=$(mktemp -d)

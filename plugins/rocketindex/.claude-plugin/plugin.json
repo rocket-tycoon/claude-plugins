@@ -3,11 +3,11 @@
   "version": "0.1.0-beta.35",
   "description": "Semantic code navigation - find callers, definitions, and dependencies without grep",
   "author": {
-    "name": "Rocket Tycoon",
-    "url": "https://github.com/rocket-tycoon"
+    "name": "Manifest",
+    "url": "https://github.com/manifestdocs"
   },
-  "repository": "https://github.com/rocket-tycoon/rocket-index",
-  "homepage": "https://github.com/rocket-tycoon/rocket-index",
+  "repository": "https://github.com/manifestdocs/rocket-index",
+  "homepage": "https://github.com/manifestdocs/rocket-index",
   "license": "BSL-1.1",
   "keywords": ["code-navigation", "semantic-search", "find-callers", "dependency-graph", "mcp"],
   "mcpServers": {

@@ -1,16 +1,16 @@
-# Rocket Tycoon Claude Code Plugins
+# Manifest Claude Code Plugins
 
-Claude Code plugins from Rocket Tycoon.
+Claude Code plugins from Manifest.
 
 ## Installation
 
 ```bash
 # Add the marketplace
-/plugin marketplace add rocket-tycoon/claude-plugins
+/plugin marketplace add manifestdocs/claude-plugins
 
 # Install plugins
-/plugin install rocketindex
-/plugin install manifest
+/plugin install rocketindex@manifest-plugins
+/plugin install manifest@manifest-plugins
 ```
 
 ## Available Plugins
@@ -18,4 +18,4 @@ Claude Code plugins from Rocket Tycoon.
 | Plugin | Description |
 |--------|-------------|
 | **rocketindex** | Semantic code navigation - find callers, definitions, and dependencies |
-| **manifest** | Living feature documentation for AI-assisted development |
+| **manifest** | Living documentation for feature-driven product engineering |

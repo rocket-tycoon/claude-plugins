@@ -1,10 +1,10 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
-  "name": "rocket-tycoon-plugins",
-  "description": "Claude Code plugins from Rocket Tycoon",
+  "name": "manifest-plugins",
+  "description": "Claude Code plugins from Manifest",
   "owner": {
-    "name": "Rocket Tycoon",
-    "url": "https://github.com/rocket-tycoon"
+    "name": "Manifest",
+    "url": "https://github.com/manifestdocs"
   },
   "plugins": [
     {
@@ -12,25 +12,28 @@
       "description": "Semantic code navigation - find callers, definitions, and dependencies without grep",
       "version": "0.1.0-beta.35",
       "author": {
-        "name": "Rocket Tycoon",
-        "url": "https://github.com/rocket-tycoon"
+        "name": "Manifest",
+        "url": "https://github.com/manifestdocs"
       },
       "source": "./plugins/rocketindex",
       "category": "mcp",
-      "homepage": "https://github.com/rocket-tycoon/rocket-index",
+      "homepage": "https://github.com/manifestdocs/rocket-index",
       "tags": ["code-navigation", "semantic-search", "mcp", "find-callers", "dependency-graph"]
     },
     {
       "name": "manifest",
-      "description": "Living feature documentation for AI-assisted development",
-      "version": "0.1.15",
+      "description": "Living documentation for feature-driven product engineering",
+      "version": "0.5.0",
       "author": {
-        "name": "Rocket Tycoon",
-        "url": "https://github.com/rocket-tycoon"
+        "name": "Manifest",
+        "url": "https://github.com/manifestdocs"
       },
-      "source": "./plugins/manifest",
+      "source": {
+        "source": "github",
+        "repo": "manifestdocs/manifest-plugin"
+      },
       "category": "mcp",
-      "homepage": "https://github.com/rocket-tycoon/manifest",
+      "homepage": "https://github.com/manifestdocs/manifest",
       "tags": ["feature-management", "documentation", "mcp", "product-management", "ai-agents"]
     }
   ]
