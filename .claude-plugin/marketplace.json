@@ -23,7 +23,7 @@
     {
       "name": "manifest",
       "description": "Living documentation for feature-driven product engineering",
-      "version": "1.1.0",
+      "version": "1.2.0",
       "author": {
         "name": "Manifest",
         "url": "https://github.com/manifestdocs"
